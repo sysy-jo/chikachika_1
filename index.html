@@ -32,10 +32,10 @@
 
   <main class="page-shell">
     <section class="kpi-grid" aria-label="핵심 지표">
-      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">분석 과목</span><span class="kpi-icon icon-blue">▤</span></div><div class="kpi-value" id="kpi-subjects">—</div><div class="kpi-foot">국어 · 수학 · 영어 · 탐구</div></article>
-      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">3월 → 6월 평균 변화</span><span class="kpi-icon icon-violet">↗</span></div><div class="kpi-value" id="kpi-growth">—</div><div class="kpi-foot" id="kpi-growth-caption">자료를 불러오는 중</div></article>
-      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">전국 평균 대비</span><span class="kpi-icon icon-cyan">◎</span></div><div class="kpi-value" id="kpi-national">—</div><div class="kpi-foot">6월 기준 · 전 과목 평균</div></article>
-      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">상승 과목</span><span class="kpi-icon icon-amber">↑</span></div><div class="kpi-value" id="kpi-improved">—</div><div class="kpi-foot">3월 대비 6월 성적 상승</div></article>
+      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">부용고 3월 평균 확인</span><span class="kpi-icon icon-blue">▤</span></div><div class="kpi-value" id="kpi-subjects">—</div><div class="kpi-foot" id="kpi-subjects-caption">표준점수 자료 확인 과목</div></article>
+      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">전국 평균과의 격차</span><span class="kpi-icon icon-violet">↗</span></div><div class="kpi-value" id="kpi-growth">—</div><div class="kpi-foot" id="kpi-growth-caption">3월 표준점수 기준</div></article>
+      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">전국 3→6월 오른 과목</span><span class="kpi-icon icon-cyan">◎</span></div><div class="kpi-value" id="kpi-national">—</div><div class="kpi-foot">원점수 평균 기준 · 6과목</div></article>
+      <article class="kpi-card"><div class="kpi-top"><span class="kpi-label">부용고 자료 확인 회차</span><span class="kpi-icon icon-amber">↑</span></div><div class="kpi-value" id="kpi-improved">—</div><div class="kpi-foot">6월·9월 학교 성적 미제공</div></article>
     </section>
 
     <div class="data-notice" id="data-notice" role="status"><span class="notice-mark">i</span><span id="notice-text">분석 자료를 확인하고 있습니다.</span></div>
@@ -48,31 +48,31 @@
     </nav>
 
     <section class="tab-panel active" role="tabpanel" id="panel-national" aria-labelledby="tab-national" data-panel="national">
-      <div class="section-heading"><div><div class="section-kicker">NATIONAL COMPARISON</div><h2>전국과 나란히 보는 우리 학년</h2><p>6월 모의고사 과목별 학교 평균과 전국 평균을 비교합니다.</p></div><span class="section-index">01 / 04</span></div>
+      <div class="section-heading"><div><div class="section-kicker">NATIONAL COMPARISON</div><h2>3월 부용고 평균과 전국 기준</h2><p>표준점수 평균이 확인된 네 과목의 부용고·전국 격차입니다.</p></div><span class="section-index">01 / 04</span></div>
       <div class="content-grid">
-        <article class="panel-card chart-card"><div class="card-heading"><div><h3>과목별 평균 점수</h3><p>원점수 기준 · 점</p></div><span class="chart-legend"><i class="legend-school"></i> 부용고 <i class="legend-national"></i> 전국</span></div><div class="chart-wrap"><canvas id="nationalChart" aria-label="학교와 전국 과목별 평균 점수 비교" role="img"></canvas><div class="empty-chart" data-empty="nationalChart">평균 점수 자료가 등록되면<br>비교 그래프가 표시됩니다.</div></div></article>
-        <article class="panel-card summary-card"><div class="card-heading"><div><h3>한눈에 보는 결과</h3><p>전국 평균 대비 6월 기준</p></div><span class="mini-icon">✦</span></div><div id="national-summary" class="summary-list"><div class="empty-copy">통계 자료를 불러오면 과목별 강점과 보완점을 정리합니다.</div></div></article>
+        <article class="panel-card chart-card"><div class="card-heading"><div><h3>3월 표준점수 평균 격차</h3><p>부용고 평균 − 전국 평균 · 표준점수</p></div><span class="chart-tag">MARCH · STANDARD SCORE</span></div><div class="chart-wrap"><canvas id="nationalChart" aria-label="3월 부용고와 전국 표준점수 평균 격차" role="img"></canvas><div class="empty-chart" data-empty="nationalChart">표준점수 평균 자료가 없습니다.</div></div></article>
+        <article class="panel-card summary-card"><div class="card-heading"><div><h3>전국 원점수 평균 변화</h3><p>3월 → 6월 · 전국 통계</p></div><span class="mini-icon">✦</span></div><div id="national-summary" class="summary-list"><div class="empty-copy">전국 과목별 통계를 불러옵니다.</div></div></article>
       </div>
     </section>
 
     <section class="tab-panel" role="tabpanel" id="panel-subject" aria-labelledby="tab-subject" data-panel="subject" hidden>
-      <div class="section-heading"><div><div class="section-kicker">SUBJECT DEEP DIVE</div><h2>과목별로 깊게 살펴보기</h2><p>과목을 선택해 3월과 6월의 평균·성취 분포를 확인합니다.</p></div><span class="section-index">02 / 04</span></div>
+      <div class="section-heading"><div><div class="section-kicker">SUBJECT DEEP DIVE</div><h2>과목별로 깊게 살펴보기</h2><p>전국 원점수의 3·6월 평균과, 자료가 있는 과목의 부용고 3월 표준점수를 확인합니다.</p></div><span class="section-index">02 / 04</span></div>
       <div class="subject-toolbar"><div id="subject-filters" class="subject-filters" aria-label="과목 선택"></div><span class="subject-unit">선택 과목 <b id="subject-current">—</b></span></div>
-      <div class="content-grid"><article class="panel-card chart-card"><div class="card-heading"><div><h3>월별 평균 점수</h3><p>3월과 6월 성취 변화</p></div><span class="chart-tag">SCORE TREND</span></div><div class="chart-wrap"><canvas id="subjectChart" role="img" aria-label="선택 과목 월별 평균 점수"></canvas><div class="empty-chart" data-empty="subjectChart">과목별 평균 자료가 등록되면<br>월별 변화가 표시됩니다.</div></div></article>
-        <article class="panel-card detail-card"><div class="card-heading"><div><h3>성취 요약</h3><p id="subject-detail-caption">3월 → 6월</p></div><span class="detail-arrow">↗</span></div><div id="subject-detail" class="detail-content"><div class="empty-copy">학교 평균, 표준편차 등 과목별 자료가 필요합니다.</div></div></article></div>
+      <div class="content-grid"><article class="panel-card chart-card"><div class="card-heading"><div><h3>전국 원점수 평균</h3><p>3월과 6월 · 과목 배점 기준</p></div><span class="chart-tag">NATIONAL RAW SCORE</span></div><div class="chart-wrap"><canvas id="subjectChart" role="img" aria-label="선택 과목 전국 3월 및 6월 원점수 평균"></canvas><div class="empty-chart" data-empty="subjectChart">전국 통계 자료를 확인할 수 없습니다.</div></div></article>
+        <article class="panel-card detail-card"><div class="card-heading"><div><h3>부용고 3월 표준점수</h3><p>전국 3월 표준점수와 비교</p></div><span class="detail-arrow">↗</span></div><div id="subject-detail" class="detail-content"><div class="empty-copy">과목별 학교 평균 자료를 확인하고 있습니다.</div></div></article></div>
     </section>
 
     <section class="tab-panel" role="tabpanel" id="panel-flow" aria-labelledby="tab-flow" data-panel="flow" hidden>
-      <div class="section-heading"><div><div class="section-kicker">PROGRESS TRACKER</div><h2>3월에서 6월, 변화의 흐름</h2><p>전체 과목의 점수 변화와 과목별 상승·하락을 확인합니다.</p></div><span class="section-index">03 / 04</span></div>
-      <div class="content-grid"><article class="panel-card chart-card"><div class="card-heading"><div><h3>전체 과목 성장 추이</h3><p>학교 평균 원점수</p></div><span class="chart-tag">MARCH → JUNE</span></div><div class="chart-wrap tall"><canvas id="flowChart" role="img" aria-label="3월에서 6월 전체 과목 점수 변화"></canvas><div class="empty-chart" data-empty="flowChart">두 회차의 점수 자료가 등록되면<br>성장 추이가 표시됩니다.</div></div></article>
-        <article class="panel-card summary-card"><div class="card-heading"><div><h3>변화 포인트</h3><p>과목별 평균 변화량</p></div><span class="mini-icon">⌁</span></div><div id="flow-summary" class="summary-list"><div class="empty-copy">3월과 6월의 학교 평균이 필요합니다.</div></div></article></div>
+      <div class="section-heading"><div><div class="section-kicker">NATIONAL PROGRESS TRACKER</div><h2>전국 원점수의 3월→6월 변화</h2><p>부용고 성적 추이가 아닌 전국 과목별 평균의 변화입니다.</p></div><span class="section-index">03 / 04</span></div>
+      <div class="content-grid"><article class="panel-card chart-card"><div class="card-heading"><div><h3>전국 과목별 원점수 평균</h3><p>과목 배점 대비 평균 비율 · %</p></div><span class="chart-tag">NATIONAL ONLY</span></div><div class="chart-wrap tall"><canvas id="flowChart" role="img" aria-label="전국 3월과 6월 과목별 원점수 평균 비율"></canvas><div class="empty-chart" data-empty="flowChart">전국 통계 자료를 확인할 수 없습니다.</div></div></article>
+        <article class="panel-card summary-card"><div class="card-heading"><div><h3>전국 평균 변화량</h3><p>3월 → 6월 원점수</p></div><span class="mini-icon">⌁</span></div><div id="flow-summary" class="summary-list"><div class="empty-copy">전국 과목별 통계를 불러옵니다.</div></div></article></div>
     </section>
 
     <section class="tab-panel" role="tabpanel" id="panel-insight" aria-labelledby="tab-insight" data-panel="insight" hidden>
-      <div class="section-heading"><div><div class="section-kicker">AI LEARNING NOTES</div><h2>데이터가 제안하는 다음 한 걸음</h2><p>점수 변화와 전국 비교를 바탕으로 학습 방향을 정리합니다.</p></div><span class="section-index">04 / 04</span></div>
-      <div class="insight-banner"><div class="insight-spark">✳</div><div><span class="insight-label">ACADEMIC INSIGHT</span><h3 id="insight-headline">분석 자료를 기다리고 있어요</h3><p id="insight-lead">학교 평균 점수와 전국 통계가 등록되면 데이터 기반 학습 제안을 보여드립니다.</p></div></div>
+      <div class="section-heading"><div><div class="section-kicker">ACADEMIC INSIGHT</div><h2>확인된 자료에서 찾은 학습 참고점</h2><p>부용고 3월 표준점수와 전국 통계만 사용합니다.</p></div><span class="section-index">04 / 04</span></div>
+      <div class="insight-banner"><div class="insight-spark">✳</div><div><span class="insight-label">DATA-BASED NOTES</span><h3 id="insight-headline">분석 자료를 정리하고 있습니다.</h3><p id="insight-lead">학교 6월·9월 성적은 없어, 학교의 회차별 향상 여부는 분석하지 않았습니다.</p></div></div>
       <div id="insight-grid" class="insight-grid"><article class="insight-card"><span class="insight-number">01</span><h3>강점을 이어가기</h3><p>과목별 성취 자료를 바탕으로 강점 영역을 찾습니다.</p></article><article class="insight-card"><span class="insight-number">02</span><h3>보완 우선순위</h3><p>전국 평균과의 차이와 회차별 변화를 함께 살펴봅니다.</p></article><article class="insight-card"><span class="insight-number">03</span><h3>다음 학습 계획</h3><p>자료가 등록되면 확인된 변화에 맞춘 학습 방향을 제안합니다.</p></article></div>
-      <div class="method-note"><span>ⓘ</span><p>이 페이지의 인사이트는 등록된 집계 자료를 바탕으로 자동 정리됩니다. 학생 개인별 성적이나 석차를 추정하지 않습니다.</p></div>
+      <div class="method-note"><span>ⓘ</span><p>표준점수 평균 격차와 전국 원점수 변화로 만든 집계 참고 자료입니다. 학교 6월·9월 변화나 학생 개인의 결과를 추정하지 않습니다.</p></div>
     </section>
     <footer class="footer"><span>부용고등학교 · 1학년 모의고사 분석</span><span>2026학년도 <i>·</i> 학년 단위 집계</span></footer>
   </main>
